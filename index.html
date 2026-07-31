@@ -51,8 +51,8 @@
 
       <article class="publication">
         <a class="publication-visual" href="https://shinjeongkim.com/mlp-splatting/" rel="noreferrer" aria-label="MLP Splatting project page">
-          <video autoplay loop muted playsinline preload="metadata" poster="assets/mlp-splatting-poster.jpg" aria-label="MLP Splatting object-centric scene decomposition preview">
-            <source src="assets/mlp-splatting-preview.mp4" type="video/mp4">
+          <video autoplay loop muted playsinline preload="none" poster="assets/mlp-splatting-poster.jpg" data-lazy-video aria-label="MLP Splatting object-centric scene decomposition preview">
+            <source data-src="assets/mlp-splatting-preview.mp4" type="video/mp4">
           </video>
           <span class="media-label">MLP Splatting</span>
         </a>
@@ -101,8 +101,8 @@
 
       <article class="publication">
         <a class="publication-visual" href="https://yuzhoucheng66.github.io/logs.github.io/" rel="noreferrer" aria-label="LoGS project page">
-          <video autoplay loop muted playsinline preload="metadata" poster="assets/logs-poster.jpg" aria-label="LoGS live visual localization preview">
-            <source src="assets/logs-preview.mp4" type="video/mp4">
+          <video autoplay loop muted playsinline preload="none" poster="assets/logs-poster.jpg" data-lazy-video aria-label="LoGS live visual localization preview">
+            <source data-src="assets/logs-preview.mp4" type="video/mp4">
           </video>
           <span class="media-label">LoGS localization</span>
         </a>
@@ -133,9 +133,34 @@
     </footer>
   </main>
   <script>
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      document.querySelectorAll("video").forEach((video) => video.pause());
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const lazyVideos = document.querySelectorAll("video[data-lazy-video]");
+    const loadVideo = (video) => {
+      if (video.dataset.loaded) return;
+
+      video.querySelectorAll("source[data-src]").forEach((source) => {
+        source.src = source.dataset.src;
+      });
+      video.dataset.loaded = "true";
+      video.load();
+      video.play()?.catch(() => {});
+    };
+
+    if (reduceMotion) {
       document.querySelectorAll("svg").forEach((svg) => svg.pauseAnimations?.());
+    } else if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            loadVideo(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: "200px 0px" });
+
+      lazyVideos.forEach((video) => observer.observe(video));
+    } else {
+      lazyVideos.forEach(loadVideo);
     }
   </script>
 </body>
