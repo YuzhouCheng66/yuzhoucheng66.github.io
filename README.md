@@ -1,6 +1,9 @@
 # Yuzhou Cheng — Academic Homepage
 
-A compact, single-page academic website inspired by Jon Barron's homepage. It is plain HTML and CSS, with no build step or external dependencies.
+A compact, single-page academic website that follows the classic Jon Barron
+computer-vision homepage structure: an 800 px table layout, 14 px Lato type,
+160 × 160 publication media, and hover-to-video previews. It is plain HTML and
+CSS, with no build step.
 
 ## Preview locally
 
@@ -28,6 +31,7 @@ See `MEDIA_FILES.txt` for the exact media filenames included in this package.
 
 The site will be available at `https://yuzhoucheng66.github.io/`.
 
-## Replace the portrait
+## Portrait
 
-Replace `assets/avatar-placeholder.svg` with a portrait image and update the `src` in `index.html`. A roughly 4:5 portrait crop works best.
+The square web-optimized portrait is stored at `assets/yuzhou-cheng.jpg` and
+displayed with a circular mask by `styles.css`.

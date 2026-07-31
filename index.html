@@ -1,167 +1,137 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yuzhou Cheng — PhD student in robot vision and spatial intelligence at Imperial College London.">
-  <meta name="theme-color" content="#ffffff">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Yuzhou Cheng</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="author" content="Yuzhou Cheng">
+  <meta name="description" content="Yuzhou Cheng — PhD student in robot vision and spatial intelligence at Imperial College London.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="assets/favicon.svg?v=classic-20260731" type="image/svg+xml">
+  <link rel="stylesheet" type="text/css" href="styles.css?v=classic-20260731">
 </head>
+
 <body>
-  <main class="page">
-    <header class="intro">
-      <div class="intro-copy">
-        <h1>Yuzhou Cheng</h1>
+  <table class="page"><tbody>
+    <tr>
+      <td>
+        <table class="intro-table"><tbody>
+          <tr>
+            <td class="intro-copy">
+              <p class="name">Yuzhou Cheng</p>
+              <p>
+                I am a second-year PhD student in the
+                <a href="https://www.imperial.ac.uk/a-z-research/dyson-robotics-lab/">Dyson Robotics Lab</a>
+                at Imperial College London, advised by
+                <a href="https://www.doc.ic.ac.uk/~ajd/">Andrew Davison</a> and
+                <a href="https://pmediano.gitlab.io/">Pedro Mediano</a>.
+                Previously, I received my BSc from CUHK-Shenzhen under
+                <a href="https://tomluo123.github.io/">Zhi-Quan Luo</a> and my MSc from UCL under
+                <a href="https://dkanou.github.io/">Dimitrios Kanoulas</a>.
+              </p>
+              <p>
+                How can robot vision lead to spatial intelligence? I explore this question through distributed inference frameworks and 3D representations.
+              </p>
+              <p class="profile-links">
+                <a href="mailto:yc3825@ic.ac.uk">Email</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?user=NHGDWxUAAAAJ">Scholar</a> &nbsp;/&nbsp;
+                <a href="https://github.com/YuzhouCheng66">Github</a>
+              </p>
+            </td>
+            <td class="portrait-cell">
+              <img class="portrait" src="assets/yuzhou-cheng.jpg?v=portrait-tight-20260731" alt="Portrait of Yuzhou Cheng">
+            </td>
+          </tr>
+        </tbody></table>
 
-        <p>
-          I am a second-year PhD student in the
-          <a href="https://www.imperial.ac.uk/a-z-research/dyson-robotics-lab/" rel="noreferrer">Dyson Robotics Lab</a>
-          at Imperial College London, advised by
-          <a href="https://www.doc.ic.ac.uk/~ajd/" rel="noreferrer">Andrew Davison</a>
-          and
-          <a href="https://pmediano.gitlab.io/" rel="noreferrer">Pedro Mediano</a>.
-          I received my BSc from CUHK-Shenzhen, advised by
-          <a href="https://tomluo123.github.io/" rel="noreferrer">Zhi-Quan Luo</a>,
-          and my MSc from UCL, advised by
-          <a href="https://dkanou.github.io/" rel="noreferrer">Dimitrios Kanoulas</a>.
-        </p>
+        <table class="section-table"><tbody>
+          <tr>
+            <td>
+              <h2>Research</h2>
+            </td>
+          </tr>
+        </tbody></table>
 
-        <p class="research-question">
-          How can robot vision lead to spatial intelligence? I explore this question through distributed inference frameworks and 3D representations.
-        </p>
+        <table class="papers"><tbody>
+          <tr class="paper-row" onmouseover="mlp_start()" onmouseout="mlp_stop()">
+            <td class="media-cell">
+              <div class="one">
+                <div class="two" id="mlp_media">
+                  <video muted autoplay loop playsinline poster="assets/mlp-splatting-poster.jpg?v=teaser-20260731">
+                    <source src="assets/mlp-splatting-preview.mp4?v=teaser-20260731" type="video/mp4">
+                  </video>
+                </div>
+                <img src="assets/mlp-splatting-poster.jpg?v=teaser-20260731" alt="MLP Splatting preview">
+              </div>
+              <script>
+                function mlp_start() { document.getElementById('mlp_media').style.opacity = '1'; }
+                function mlp_stop() { document.getElementById('mlp_media').style.opacity = '0'; }
+                mlp_stop();
+              </script>
+            </td>
+            <td class="paper-copy">
+              <a href="https://shinjeongkim.com/mlp-splatting/"><span class="papertitle">MLP Splatting: Object-Centric Neural Fields</span></a>
+              <br>
+              Shinjeong Kim*, <strong>Yuzhou Cheng*</strong>, Xin Kong*, Paul H. J. Kelly, Andrew J. Davison
+              <br>
+              <em>ECCV</em>, 2026 &nbsp; (* equal contribution)
+              <br>
+              <a href="https://shinjeongkim.com/mlp-splatting/">project page</a> /
+              <a href="https://arxiv.org/abs/2606.03877">arXiv</a>
+              <p>Object-centric neural primitives for photorealistic rendering and interactive scene editing.</p>
+            </td>
+          </tr>
 
-        <nav class="profile-links" aria-label="Profile links">
-          <a href="mailto:yc3825@ic.ac.uk">Email</a>
-          <span aria-hidden="true">/</span>
-          <a href="https://scholar.google.com/citations?user=NHGDWxUAAAAJ" rel="noreferrer">Google Scholar</a>
-          <span aria-hidden="true">/</span>
-          <a href="https://github.com/YuzhouCheng66" rel="noreferrer">GitHub</a>
-        </nav>
-      </div>
+          <tr class="paper-row">
+            <td class="media-cell">
+              <div class="one paper-figure">
+                <img src="assets/bp-gaussian-paper-figure.png?v=classic-20260731" alt="Beliefs becoming progressively Gaussian along a factor-graph chain">
+              </div>
+            </td>
+            <td class="paper-copy">
+              <a href="https://arxiv.org/abs/2601.21935"><span class="papertitle">Belief Propagation Converges to Gaussian Distributions in Sparsely-Connected Factor Graphs</span></a>
+              <br>
+              Tom Yates, <strong>Yuzhou Cheng</strong>, Ignacio Alzugaray, Danyal Akarca, Pedro A. M. Mediano, Andrew J. Davison
+              <br>
+              <em>ICML</em>, 2026
+              <br>
+              <a href="https://arxiv.org/abs/2601.21935">arXiv</a> /
+              <a href="https://openreview.net/forum?id=FaGn04tvzq">OpenReview</a>
+              <p>A theoretical account of when beliefs become Gaussian in sparse, loopy factor graphs.</p>
+            </td>
+          </tr>
 
-      <div class="portrait">
-        <img src="assets/avatar-placeholder.svg" alt="Portrait placeholder for Yuzhou Cheng">
-      </div>
-    </header>
-
-    <section class="research" aria-labelledby="research-title">
-      <h2 id="research-title">Research</h2>
-
-      <article class="publication">
-        <a class="publication-visual" href="https://shinjeongkim.com/mlp-splatting/" rel="noreferrer" aria-label="MLP Splatting project page">
-          <video autoplay loop muted playsinline preload="none" poster="assets/mlp-splatting-poster.jpg" data-lazy-video aria-label="MLP Splatting object-centric scene decomposition preview">
-            <source data-src="assets/mlp-splatting-preview.mp4" type="video/mp4">
-          </video>
-          <span class="media-label">MLP Splatting</span>
-        </a>
-        <div class="publication-copy">
-          <h3>
-            <a href="https://shinjeongkim.com/mlp-splatting/" rel="noreferrer">MLP Splatting: Object-Centric Neural Fields</a>
-          </h3>
-          <p class="authors">
-            Shinjeong Kim*, <strong>Yuzhou Cheng*</strong>, Xin Kong*, Paul H. J. Kelly, Andrew J. Davison
-          </p>
-          <p class="venue">ECCV, 2026 <span class="note">(* equal contribution)</span></p>
-          <p class="summary">
-            Object-centric neural primitives for photorealistic rendering and interactive scene editing.
-          </p>
-          <p class="paper-links">
-            <a href="https://shinjeongkim.com/mlp-splatting/" rel="noreferrer">project page</a>
-            <span>/</span>
-            <a href="https://arxiv.org/abs/2606.03877" rel="noreferrer">arXiv</a>
-          </p>
-        </div>
-      </article>
-
-      <article class="publication">
-        <a class="publication-visual" href="https://arxiv.org/abs/2601.21935" rel="noreferrer" aria-label="Belief Propagation paper">
-          <img class="paper-figure" src="assets/bp-gaussian-paper-figure.png" alt="Figure 1 from the paper, showing beliefs becoming progressively Gaussian along a factor-graph chain">
-          <span class="media-label">BP → Gaussian</span>
-        </a>
-        <div class="publication-copy">
-          <h3>
-            <a href="https://arxiv.org/abs/2601.21935" rel="noreferrer">Belief Propagation Converges to Gaussian Distributions in Sparsely-Connected Factor Graphs</a>
-          </h3>
-          <p class="authors">
-            Tom Yates, <strong>Yuzhou Cheng</strong>, Ignacio Alzugaray, Danyal Akarca, Pedro A. M. Mediano, Andrew J. Davison
-          </p>
-          <p class="venue">ICML, 2026</p>
-          <p class="summary">
-            A theoretical account of when beliefs become Gaussian in sparse, loopy factor graphs.
-          </p>
-          <p class="paper-links">
-            <a href="https://arxiv.org/abs/2601.21935" rel="noreferrer">arXiv</a>
-            <span>/</span>
-            <a href="https://openreview.net/forum?id=FaGn04tvzq" rel="noreferrer">OpenReview</a>
-          </p>
-        </div>
-      </article>
-
-      <article class="publication">
-        <a class="publication-visual" href="https://yuzhoucheng66.github.io/logs.github.io/" rel="noreferrer" aria-label="LoGS project page">
-          <video autoplay loop muted playsinline preload="none" poster="assets/logs-poster.jpg" data-lazy-video aria-label="LoGS live visual localization preview">
-            <source data-src="assets/logs-preview.mp4" type="video/mp4">
-          </video>
-          <span class="media-label">LoGS localization</span>
-        </a>
-        <div class="publication-copy">
-          <h3>
-            <a href="https://yuzhoucheng66.github.io/logs.github.io/" rel="noreferrer">LoGS: Visual Localization via Gaussian Splatting with Fewer Training Images</a>
-          </h3>
-          <p class="authors">
-            <strong>Yuzhou Cheng</strong>, Jianhao Jiao, Yue Wang, Dimitrios Kanoulas
-          </p>
-          <p class="venue">ICRA, 2025</p>
-          <p class="summary">
-            Few-shot visual localization using a compact 3D Gaussian Splatting map.
-          </p>
-          <p class="paper-links">
-            <a href="https://yuzhoucheng66.github.io/logs.github.io/" rel="noreferrer">project page</a>
-            <span>/</span>
-            <a href="https://arxiv.org/abs/2410.11505" rel="noreferrer">arXiv</a>
-            <span>/</span>
-            <a href="https://github.com/RPL-CS-UCL/gs_localization" rel="noreferrer">code</a>
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <footer>
-      <p>Last updated July 2026.</p>
-    </footer>
-  </main>
-  <script>
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const lazyVideos = document.querySelectorAll("video[data-lazy-video]");
-    const loadVideo = (video) => {
-      if (video.dataset.loaded) return;
-
-      video.querySelectorAll("source[data-src]").forEach((source) => {
-        source.src = source.dataset.src;
-      });
-      video.dataset.loaded = "true";
-      video.load();
-      video.play()?.catch(() => {});
-    };
-
-    if (reduceMotion) {
-      document.querySelectorAll("svg").forEach((svg) => svg.pauseAnimations?.());
-    } else if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            loadVideo(entry.target);
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { rootMargin: "200px 0px" });
-
-      lazyVideos.forEach((video) => observer.observe(video));
-    } else {
-      lazyVideos.forEach(loadVideo);
-    }
-  </script>
+          <tr class="paper-row" onmouseover="logs_start()" onmouseout="logs_stop()">
+            <td class="media-cell">
+              <div class="one">
+                <div class="two" id="logs_media">
+                  <video muted autoplay loop playsinline poster="assets/logs-poster.jpg?v=classic-20260731">
+                    <source src="assets/logs-preview.mp4?v=classic-20260731" type="video/mp4">
+                  </video>
+                </div>
+                <img src="assets/logs-poster.jpg?v=classic-20260731" alt="LoGS visual localization preview">
+              </div>
+              <script>
+                function logs_start() { document.getElementById('logs_media').style.opacity = '1'; }
+                function logs_stop() { document.getElementById('logs_media').style.opacity = '0'; }
+                logs_stop();
+              </script>
+            </td>
+            <td class="paper-copy">
+              <a href="https://yuzhoucheng66.github.io/logs.github.io/"><span class="papertitle">LoGS: Visual Localization via Gaussian Splatting with Fewer Training Images</span></a>
+              <br>
+              <strong>Yuzhou Cheng</strong>, Jianhao Jiao, Yue Wang, Dimitrios Kanoulas
+              <br>
+              <em>ICRA</em>, 2025
+              <br>
+              <a href="https://yuzhoucheng66.github.io/logs.github.io/">project page</a> /
+              <a href="https://arxiv.org/abs/2410.11505">arXiv</a> /
+              <a href="https://github.com/RPL-CS-UCL/gs_localization">code</a>
+              <p>Few-shot visual localization using a compact 3D Gaussian Splatting map.</p>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </tbody></table>
 </body>
 </html>
