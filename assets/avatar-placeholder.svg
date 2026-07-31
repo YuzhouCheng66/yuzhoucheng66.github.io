@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 420" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait placeholder</title>
+  <desc id="desc">A minimal grey portrait placeholder marked YC.</desc>
+  <rect width="336" height="420" fill="#f3f4f5"/>
+  <circle cx="168" cy="142" r="59" fill="none" stroke="#b7bcc2" stroke-width="3"/>
+  <path d="M72 348c9-77 47-115 96-115s87 38 96 115" fill="none" stroke="#b7bcc2" stroke-width="3"/>
+  <line x1="48" y1="378" x2="288" y2="378" stroke="#d1d5d9" stroke-width="2"/>
+  <text x="168" y="402" fill="#858b92" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle" letter-spacing="4">YC</text>
+</svg>
