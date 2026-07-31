@@ -9,19 +9,19 @@
   <meta property="og:title" content="Yuzhou Cheng">
   <meta property="og:description" content="PhD student in robot vision and spatial intelligence at Imperial College London.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yuzhoucheng66.github.io/">
-  <meta property="og:image" content="https://yuzhoucheng66.github.io/assets/yuzhou-cheng.jpg?v=avatar-20260731">
+  <meta property="og:url" content="http://yuzhoucheng.com/">
+  <meta property="og:image" content="http://yuzhoucheng.com/assets/yuzhou-cheng.jpg?v=avatar-20260731">
   <meta property="og:image:width" content="800">
   <meta property="og:image:height" content="800">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Yuzhou Cheng">
   <meta name="twitter:description" content="PhD student in robot vision and spatial intelligence at Imperial College London.">
-  <meta name="twitter:image" content="https://yuzhoucheng66.github.io/assets/yuzhou-cheng.jpg?v=avatar-20260731">
-  <link rel="preload" href="assets/fonts/lato-v25-light-300.ttf" as="font" type="font/ttf" crossorigin>
+  <meta name="twitter:image" content="http://yuzhoucheng.com/assets/yuzhou-cheng.jpg?v=avatar-20260731">
+  <link rel="preload" href="assets/fonts/lato-v25-light-300.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/lxgw-wenkai-v1.522-name.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="assets/favicon.png?v=avatar-20260731" type="image/png">
   <link rel="apple-touch-icon" href="assets/yuzhou-cheng.jpg?v=avatar-20260731">
-  <link rel="stylesheet" type="text/css" href="styles.css?v=fonts-video-20260731">
+  <link rel="stylesheet" type="text/css" href="styles.css?v=fonts-video-fix-20260731">
 </head>
 
 <body>
@@ -69,6 +69,7 @@
           <tr class="paper-row">
             <td class="media-cell">
               <div class="one">
+                <img class="media-poster" src="assets/mlp-splatting-poster.jpg?v=teaser-20260731" alt="MLP Splatting preview">
                 <video class="preview-video" muted autoplay loop playsinline preload="auto" poster="assets/mlp-splatting-poster.jpg?v=teaser-20260731" aria-label="MLP Splatting preview">
                   <source src="assets/mlp-splatting-preview.mp4?v=teaser-20260731" type="video/mp4">
                 </video>
@@ -109,6 +110,7 @@
           <tr class="paper-row">
             <td class="media-cell">
               <div class="one">
+                <img class="media-poster" src="assets/logs-poster.jpg?v=classic-20260731" alt="LoGS visual localization preview">
                 <video class="preview-video" muted autoplay loop playsinline preload="auto" poster="assets/logs-poster.jpg?v=classic-20260731" aria-label="LoGS visual localization preview">
                   <source src="assets/logs-preview.mp4?v=classic-20260731" type="video/mp4">
                 </video>
@@ -131,5 +133,19 @@
       </td>
     </tr>
   </tbody></table>
+  <script>
+    document.querySelectorAll(".preview-video").forEach((video) => {
+      const showVideo = () => {
+        video.classList.add("is-ready");
+        video.play().catch(() => {});
+      };
+
+      if (video.readyState >= 3) {
+        showVideo();
+      } else {
+        video.addEventListener("canplay", showVideo, { once: true });
+      }
+    });
+  </script>
 </body>
 </html>
