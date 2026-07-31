@@ -32,6 +32,15 @@
   unicode-range: U+FF08, U+7A0B, U+8A89, U+6D32, U+FF09;
 }
 
+@font-face {
+  font-family: 'TinosTitle';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/tinos-v26-name.woff2') format('woff2');
+  unicode-range: U+0020, U+0043, U+0059, U+0065, U+0067, U+0068, U+006E, U+006F, U+0075, U+007A;
+}
+
 body,
 td,
 th,
@@ -116,12 +125,13 @@ h2 {
   font-family: 'LatoSite', sans-serif;
   font-size: 32px;
   font-weight: 300;
+  line-height: 1.1;
   text-align: center;
 }
 
 .name-en {
-  font-family: 'LatoSite', sans-serif;
-  font-weight: 300;
+  font-family: 'TinosTitle', serif;
+  font-weight: 400;
 }
 
 .name-cn {
