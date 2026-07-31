@@ -6,8 +6,22 @@
   <meta name="author" content="Yuzhou Cheng">
   <meta name="description" content="Yuzhou Cheng — PhD student in robot vision and spatial intelligence at Imperial College London.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="assets/favicon.svg?v=classic-20260731" type="image/svg+xml">
-  <link rel="stylesheet" type="text/css" href="styles.css?v=classic-20260731">
+  <meta property="og:title" content="Yuzhou Cheng">
+  <meta property="og:description" content="PhD student in robot vision and spatial intelligence at Imperial College London.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yuzhoucheng66.github.io/">
+  <meta property="og:image" content="https://yuzhoucheng66.github.io/assets/yuzhou-cheng.jpg?v=avatar-20260731">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yuzhou Cheng">
+  <meta name="twitter:description" content="PhD student in robot vision and spatial intelligence at Imperial College London.">
+  <meta name="twitter:image" content="https://yuzhoucheng66.github.io/assets/yuzhou-cheng.jpg?v=avatar-20260731">
+  <link rel="preload" href="assets/fonts/lato-v25-light-300.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/lxgw-wenkai-v1.522-name.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="assets/favicon.png?v=avatar-20260731" type="image/png">
+  <link rel="apple-touch-icon" href="assets/yuzhou-cheng.jpg?v=avatar-20260731">
+  <link rel="stylesheet" type="text/css" href="styles.css?v=fonts-video-20260731">
 </head>
 
 <body>
@@ -17,7 +31,7 @@
         <table class="intro-table"><tbody>
           <tr>
             <td class="intro-copy">
-              <p class="name">Yuzhou Cheng</p>
+              <p class="name"><span class="name-en">Yuzhou Cheng</span><span class="name-cn">（程誉洲）</span></p>
               <p>
                 I am a second-year PhD student in the
                 <a href="https://www.imperial.ac.uk/a-z-research/dyson-robotics-lab/">Dyson Robotics Lab</a>
@@ -52,21 +66,13 @@
         </tbody></table>
 
         <table class="papers"><tbody>
-          <tr class="paper-row" onmouseover="mlp_start()" onmouseout="mlp_stop()">
+          <tr class="paper-row">
             <td class="media-cell">
               <div class="one">
-                <div class="two" id="mlp_media">
-                  <video muted autoplay loop playsinline poster="assets/mlp-splatting-poster.jpg?v=teaser-20260731">
-                    <source src="assets/mlp-splatting-preview.mp4?v=teaser-20260731" type="video/mp4">
-                  </video>
-                </div>
-                <img src="assets/mlp-splatting-poster.jpg?v=teaser-20260731" alt="MLP Splatting preview">
+                <video class="preview-video" muted autoplay loop playsinline preload="auto" poster="assets/mlp-splatting-poster.jpg?v=teaser-20260731" aria-label="MLP Splatting preview">
+                  <source src="assets/mlp-splatting-preview.mp4?v=teaser-20260731" type="video/mp4">
+                </video>
               </div>
-              <script>
-                function mlp_start() { document.getElementById('mlp_media').style.opacity = '1'; }
-                function mlp_stop() { document.getElementById('mlp_media').style.opacity = '0'; }
-                mlp_stop();
-              </script>
             </td>
             <td class="paper-copy">
               <a href="https://shinjeongkim.com/mlp-splatting/"><span class="papertitle">MLP Splatting: Object-Centric Neural Fields</span></a>
@@ -100,21 +106,13 @@
             </td>
           </tr>
 
-          <tr class="paper-row" onmouseover="logs_start()" onmouseout="logs_stop()">
+          <tr class="paper-row">
             <td class="media-cell">
               <div class="one">
-                <div class="two" id="logs_media">
-                  <video muted autoplay loop playsinline poster="assets/logs-poster.jpg?v=classic-20260731">
-                    <source src="assets/logs-preview.mp4?v=classic-20260731" type="video/mp4">
-                  </video>
-                </div>
-                <img src="assets/logs-poster.jpg?v=classic-20260731" alt="LoGS visual localization preview">
+                <video class="preview-video" muted autoplay loop playsinline preload="auto" poster="assets/logs-poster.jpg?v=classic-20260731" aria-label="LoGS visual localization preview">
+                  <source src="assets/logs-preview.mp4?v=classic-20260731" type="video/mp4">
+                </video>
               </div>
-              <script>
-                function logs_start() { document.getElementById('logs_media').style.opacity = '1'; }
-                function logs_stop() { document.getElementById('logs_media').style.opacity = '0'; }
-                logs_stop();
-              </script>
             </td>
             <td class="paper-copy">
               <a href="https://yuzhoucheng66.github.io/logs.github.io/"><span class="papertitle">LoGS: Visual Localization via Gaussian Splatting with Fewer Training Images</span></a>
