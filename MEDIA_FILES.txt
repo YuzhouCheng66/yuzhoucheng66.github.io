@@ -1,0 +1,18 @@
+REAL PUBLICATION MEDIA
+
+assets/mlp-splatting-preview.mp4
+  MLP Splatting project video (H.264, 1280 × 720, 32.114 s)
+
+assets/mlp-splatting-poster.jpg
+  Poster frame extracted from the MLP Splatting project video
+
+assets/logs-preview.mp4
+  LoGS project video (H.264, 640 × 480, 11.000 s)
+
+assets/logs-poster.jpg
+  Poster frame extracted from the LoGS project video
+
+assets/bp-gaussian-paper-figure.png
+  Figure 1 cropped from the Belief Propagation paper
+
+The website references these files with relative paths in index.html.
